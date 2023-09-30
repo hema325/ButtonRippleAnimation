@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #350046;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    caret-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+button span {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    animation-name: ripple;
+    animation-duration: 600ms;
+}
+
+button:first-of-type {
+    background-image: linear-gradient(to right, #6f19cb, #a631de);
+}
+
+button:last-of-type {
+    background-color: #4089f2;
+}
+
+
+@keyframes ripple {
+    80% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
